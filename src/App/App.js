@@ -9,10 +9,12 @@ import firebase from 'firebase/app';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Auth from '../components/Auth/Auth';
+import EditStuff from '../components/EditStuff/EditStuff';
 import Home from '../components/Home/Home';
 import MyNavBar from '../components/MyNavBar/MyNavBar';
 import MyStuff from '../components/MyStuff/MyStuff';
 import NewStuff from '../components/NewStuff/NewStuff';
+import SingleStuff from '../components/SingleStuff/SingleStuff';
 import fbConnection from '../helpers/data/connection';
 
 import './App.scss';
@@ -69,6 +71,8 @@ class App extends React.Component {
                   <PrivateRoute path='/home' component={Home} authed={authed} />
                   <PrivateRoute path='/stuff' component={MyStuff} authed={authed} />
                   <PrivateRoute path='/new' component={NewStuff} authed={authed} />
+                  <PrivateRoute path='/edit/:id' component={EditStuff} authed={authed} />
+                  <PrivateRoute path='/single/:id' component={SingleStuff} authed={authed} />
                   <Redirect from="*" to="/auth" />
                 </Switch>
               </div>
