@@ -11,6 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Auth from '../components/Auth/Auth';
 import Home from '../components/Home/Home';
 import MyNavBar from '../components/MyNavBar/MyNavBar';
+import MyStuff from '../components/MyStuff/MyStuff';
+import NewStuff from '../components/NewStuff/NewStuff';
 import fbConnection from '../helpers/data/connection';
 
 import './App.scss';
@@ -65,6 +67,8 @@ class App extends React.Component {
                 <Switch>
                   <PublicRoute path='/auth' component={Auth} authed={authed} />
                   <PrivateRoute path='/home' component={Home} authed={authed} />
+                  <PrivateRoute path='/stuff' component={MyStuff} authed={authed} />
+                  <PrivateRoute path='/new' component={NewStuff} authed={authed} />
                   <Redirect from="*" to="/auth" />
                 </Switch>
               </div>
