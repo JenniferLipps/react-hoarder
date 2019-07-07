@@ -1,0 +1,11 @@
+{
+  "firebaseConfig": {
+    "apiKey": "",
+    "authDomain": "m",
+    "databaseURL": "m",
+    "projectId": "",
+    "storageBucket": "",
+    "messagingSenderId": "",
+    "appId": ""
+  }
+}
